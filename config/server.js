@@ -7,8 +7,17 @@
 // });
 
 module.exports = ({ env }) => ({
-  url: env("RENDER_EXTERNAL_URL"),
-  dirs: {
-    public: "/data/public"
-  },
+  host: env('APP_HOST', '0.0.0.0'),
+  port: env.int('NODE_PORT', 1337),
 });
+
+ 
+
+ 
+
+// module.exports = ({ env }) => ({
+//   url: env("RENDER_EXTERNAL_URL"),
+//   dirs: {
+//     public: "/data/public"
+//   },
+// });
